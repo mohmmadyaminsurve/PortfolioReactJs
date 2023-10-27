@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+// font-family: "Poppins", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@500&display=swap");
+// font-family: "Raleway", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+// font-family: "Titillium Web", sans-serif;
+
+$header-font-family: "Raleway", sans-serif;
+$body-font-family: "Poppins", sans-serif;
+$logo-font-family: "Titillium Web", sans-serif;
+
+//Color Combination
+$primary-color: #4d1adb;
+$white: #fef6ff;
+$black: #0c090d;
+
+body {
+  overflow-x: hidden;
+  // background-color: #f6f9fa;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family;
+}
+
+p {
+  font-family: $body-font-family;
+}
+
+a {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+$breakpoints: (
+  "sm": 480px,
+  "md": 768px,
+  "lg": 960px,
+  "lg-alter": 961px,
+  "xl": 1200px,
+);
+
+@mixin sm {
+  @media (max-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+
+@mixin lg-alter {
+  @media (min-width: map-get($breakpoints, "lg-alter")) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+//Font sizes
+
+p {
+  font-size: 17.5px;
+  line-height: 23px;
+}
+
+//Flex Properties mixing
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@mixin space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@mixin space-around {
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+}
+@mixin justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@mixin align-item-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@mixin flex-direction-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@mixin flex-direction-column-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+@mixin flex-direction-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+@mixin flex-direction-row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+//Section warp
+.section-wrap {
+  max-width: 75em;
+  margin-inline: auto;
+  padding: 20px;
+}
+
+//flex container
+.flex-container {
+  @include flex;
+  @include justify-center;
+  @include flex-direction-column;
+  @include align-item-center;
+  @include lg-alter {
+    @include flex-direction-row;
+    .text-container {
+      width: 100%;
+    }
+
+    .image-container {
+      width: 50%;
+    }
+  }
+}
+
+//xLarge Fonts
+
+h1 {
+  font-size: 50px;
+
+  @include lg {
+    font-size: 33px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+
+  @include lg {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  @include lg {
+    font-size: 20px;
+  }
+}
+
+.title {
+  position: relative;
+  color: $primary-color;
+  text-align: center;
+  width: -webkit-fill-available;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    background-color: $primary-color;
+  }
+}

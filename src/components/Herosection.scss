@@ -1,0 +1,113 @@
+@import "src/App.scss";
+
+.Hero-Section {
+  background-image: url(Images/herosectionbg.svg);
+  background-color: gold;
+  background-size: cover;
+  background-position: center;
+}
+
+.flex-container {
+  z-index: 99;
+}
+span {
+  color: $primary-color;
+}
+
+.line-1 {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.5em;
+}
+
+/* Animation */
+.anim-typewriter {
+  animation: typewriter 4s steps(40) 1ms 1 normal both, blinkTextCursor 1s steps(24) infinite;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+//Button
+.btn {
+  margin-top: 1em;
+  position: relative;
+  @include flex;
+  @include justify-center;
+  @include align-item-center;
+  border-radius: 5px;
+  background: #183153;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+  width: fit-content;
+
+  a {
+    text-decoration: none;
+    color: $white;
+    font-family: $body-font-family;
+  }
+}
+
+.btn {
+  &::after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background: $primary-color;
+    position: absolute;
+    transition: all 0.4s ease-in-out;
+    right: 0;
+  }
+}
+
+.btn {
+  &:hover {
+    &::after {
+      right: auto;
+      left: 0;
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+}
+
+.btn {
+  span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 1em;
+    color: $white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.btn:hover span {
+  color: #183153;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

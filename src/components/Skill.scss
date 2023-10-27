@@ -1,0 +1,88 @@
+@import "src/App.scss";
+
+.Skills {
+  background-size: cover;
+  background-repeat: no-repeat;
+  h2,
+  h3 {
+    color: $white;
+  }
+  .title {
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  .text-container {
+    width: -webkit-fill-available;
+  }
+
+  @include lg {
+    h3 {
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+}
+
+.container-skill {
+  position: relative;
+  color: $white;
+  text-align: center;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  padding: 13px 25px;
+  overflow: hidden;
+  margin-bottom: 1em;
+  @include flex;
+  @include space-between;
+  &::before {
+    width: 0%;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 0.18rem;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    bottom: 0;
+    background-color: $white;
+    animation-name: run;
+    animation-duration: 5s;
+  }
+}
+
+.container-skill:nth-child(3n) {
+  &::after {
+    width: 60%;
+  }
+}
+
+.container-skill:nth-child(4n) {
+  &::after {
+    width: 50%;
+  }
+}
+
+.container-skill:nth-child(5n) {
+  &::after {
+    width: 30%;
+  }
+}
+
+@keyframes run {
+  0% {
+    left: 0;
+    width: 0%;
+  }
+  50% {
+    left: 100%;
+    width: 100%;
+  }
+
+  100% {
+    left: 0;
+  }
+}

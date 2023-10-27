@@ -1,0 +1,86 @@
+@import "src/App.scss";
+
+.Process {
+  .section-wrap {
+    // overflow: hidden;
+    padding: 0px;
+    margin-bottom: 2em;
+    @include lg {
+      padding: 20px;
+      padding-bottom: 0px !important;
+      overflow: hidden;
+    }
+  }
+}
+
+.slider-rough {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.card {
+  background-color: transparent;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  width: 93% !important;
+
+  @include lg {
+    width: 100% !important;
+  }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+    // border: 1px solid #eeeafe;
+    transition: all 0.3s ease-in-out;
+  }
+  .icon-container {
+    padding: 20px;
+    background-color: #eeeafe;
+    width: fit-content;
+    margin-inline: auto;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    img {
+      object-fit: cover;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+.slick-prev {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(78%) saturate(4320%) hue-rotate(251deg) brightness(97%)
+    contrast(95%);
+}
+.slick-next {
+  filter: brightness(0) saturate(100%) invert(15%) sepia(78%) saturate(4320%) hue-rotate(251deg) brightness(97%)
+    contrast(95%);
+}
+
+slick-arrow {
+  font-size: 3em;
+  height: 2em;
+  width: 1.3em;
+}
+
+// .slick-prev:before {
+//   content: "";
+// }
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px !important;
+}
+
+@include lg {
+  .slick-prev {
+    left: -8px !important;
+    margin-inline: auto;
+  }
+
+  .slick-next {
+    right: 12px !important;
+    margin-inline: auto;
+  }
+}

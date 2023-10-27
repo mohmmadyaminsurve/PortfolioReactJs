@@ -1,0 +1,16 @@
+@import "src/App.scss";
+
+.About-Us {
+  // background-image: url(Images/blob-2.svg);
+  // background-image: url(Images/blob-scene-haike-9.svg);
+  // background-image: url(Images/Group.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(Images/blob.svg);
+
+  h2 {
+    text-align: center;
+    margin-inline: auto;
+  }
+}
