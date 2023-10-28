@@ -8,12 +8,12 @@ import { useInView } from "react-intersection-observer";
 
 const Skill = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000, startEvent: "load", once: true });
+    Aos.init({ duration: 2000, startEvent: "load", once: false });
   }, []);
 
   const myRef = useRef();
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
     threshold: 0.2, // Adjust this threshold as needed
   });
 
