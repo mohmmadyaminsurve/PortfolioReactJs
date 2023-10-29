@@ -154,17 +154,19 @@ const Portfolio = () => {
               </div>
 
               <div className={showtab === 2 ? "content content-active " : "content"}>
-                <div className="image-container">
-                  <img src={Autoparts} alt="" />
-                </div>
-                <div className="text-container">
-                  <h3> AutoParts24</h3>
-                  <p>
-                    Custom website design for "AutoParts24," your one-stop destination for automotive parts and
-                    accessories. Explore their extensive inventory and find the right components for your vehicle, all
-                    in a user-friendly online environment.
-                  </p>
-                </div>
+                <a href="https://autoparts24.in/">
+                  <div className="image-container">
+                    <img src={Autoparts} alt="" />
+                  </div>
+                  <div className="text-container">
+                    <h3> AutoParts24</h3>
+                    <p>
+                      Custom website design for "AutoParts24," your one-stop destination for automotive parts and
+                      accessories. Explore their extensive inventory and find the right components for your vehicle, all
+                      in a user-friendly online environment.
+                    </p>
+                  </div>
+                </a>
               </div>
 
               <div className={showtab === 3 ? "content content-active " : "content "}></div>

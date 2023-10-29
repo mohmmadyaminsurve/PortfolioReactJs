@@ -126,12 +126,17 @@
   }
 }
 
+.content-tabs .content a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .content-tabs {
   .container-holder {
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    // a {
+    //   text-decoration: none;
+    //   color: inherit;
+    // }
     @include flex;
     flex-wrap: wrap;
     gap: 1.5rem;
