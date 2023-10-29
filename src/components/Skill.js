@@ -2,6 +2,9 @@ import React, { useEffect, useRef } from "react";
 import "./Skill.scss";
 import Skillimage from "./Images/Skillimage.png";
 import Group from "./Images/Group1.svg";
+import UIUX from "./Images/UIX.png";
+import Php from "./Images/php.png";
+import Asp from "./Images/aspnet.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useInView } from "react-intersection-observer";
@@ -52,14 +55,15 @@ const Skill = () => {
                   <p>80%</p>
                 </div>
               </div>
-              <div className="container-skill" ref={myRef} data-fill="60%">
+
+              <div className="container-skill" ref={myRef} data-fill="30%">
                 <div className="skill-name">
                   <p>
-                    <span className="bx bxl-react"></span>React js /<span className="bx bxl-jquery"></span>Jquery
+                    <span className="bx bxl-react"></span>Reactjs/<span className="bx bxl-jquery"></span>Jquery
                   </p>
                 </div>
                 <div className="skill-per">
-                  <p>60%</p>
+                  <p>30%</p>
                 </div>
               </div>
               <div className="container-skill" ref={myRef} data-fill="30%">
@@ -72,22 +76,34 @@ const Skill = () => {
                   <p>30%</p>
                 </div>
               </div>
-              <div className="container-skill" ref={myRef} data-fill="40%">
-                <div className="skill-name">
-                  <p>Asp.net/MySql</p>
-                </div>
-                <div className="skill-per">
-                  <p>40%</p>
-                </div>
-              </div>
-              <div className="container-skill" ref={myRef} data-fill="30%">
+              <div className="container-skill" ref={myRef} data-fill="20%">
                 <div className="skill-name">
                   <p>
-                    <i className="bx bxl-php"></i>
+                    <span>
+                      <img src={Asp} alt="" />
+                    </span>
+                    Asp.net/
+                    <span>
+                      <img src={Php} alt="" />
+                    </span>
+                    Php
                   </p>
                 </div>
                 <div className="skill-per">
-                  <p>30%</p>
+                  <p>20%</p>
+                </div>
+              </div>
+              <div className="container-skill" ref={myRef} data-fill="20%">
+                <div className="skill-name">
+                  <p>
+                    <span>
+                      <img src={UIUX} alt="" />
+                    </span>
+                    Ui/Ux
+                  </p>
+                </div>
+                <div className="skill-per">
+                  <p>20%</p>
                 </div>
               </div>
             </div>
