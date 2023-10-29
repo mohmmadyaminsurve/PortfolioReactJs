@@ -7,6 +7,7 @@ import Skill from "./components/Skill";
 import Portfolio from "./components/Portfolio";
 import Process from "./components/Process";
 import Work from "./components/Work";
+import ScrollTop from "./components/ScrollTop";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Skill />
       <Portfolio />
       <Footer />
+      <ScrollTop />
     </>
   );
 }
