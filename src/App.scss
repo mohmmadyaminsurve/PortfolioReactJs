@@ -174,7 +174,7 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 35px;
 
   @include lg {
     font-size: 30px;
@@ -189,20 +189,47 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
 .title {
   position: relative;
   color: $primary-color;
   text-align: center;
   width: -webkit-fill-available;
-  &::after {
-    position: absolute;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  &::before {
     content: "";
-    width: 64px;
-    height: 0.18rem;
-    left: 0;
-    right: 0;
-    margin: auto;
+    position: absolute;
+    display: block;
+    width: 120px;
+    height: 1px;
+    background: #ddd;
+    bottom: 1px;
+    left: calc(50% - 60px);
+  }
+
+  &::after {
+    // position: absolute;
+    // content: "";
+    // width: 64px;
+    // height: 0.18rem;
+    // left: 0;
+    // right: 0;
+    // margin: auto;
+    // bottom: 0;
+    // background-color: $primary-color;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: $primary-color;
     bottom: 0;
-    background-color: $primary-color;
+    left: calc(50% - 20px);
   }
 }

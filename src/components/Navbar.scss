@@ -44,7 +44,7 @@ header {
 
   .nav-menu {
     @include flex;
-    column-gap: 60px;
+    column-gap: 20px;
 
     li {
       a {
