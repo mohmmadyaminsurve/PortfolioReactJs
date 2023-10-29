@@ -6,6 +6,7 @@ import About from "./components/About";
 import Skill from "./components/Skill";
 import Portfolio from "./components/Portfolio";
 import Process from "./components/Process";
+import Work from "./components/Work";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <HeroSection />
       <About />
       <Process />
+      <Work />
       <Skill />
       <Portfolio />
       <Footer />
