@@ -3,6 +3,20 @@
 .Skills {
   background-size: cover;
   background-repeat: no-repeat;
+  .skill-name {
+    p {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  span {
+    color: $white;
+    margin-right: 2px;
+    font-size: 27px;
+    margin-left: 5px;
+  }
+
   h2,
   h3 {
     color: $white;
@@ -25,6 +39,9 @@
   }
 }
 
+.Skills span:first-child {
+  margin-left: 0px;
+}
 .container-skill {
   position: relative;
   color: $white;

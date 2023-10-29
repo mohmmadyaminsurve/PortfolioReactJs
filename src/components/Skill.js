@@ -43,7 +43,10 @@ const Skill = () => {
               <h3>Professional Skills</h3>
               <div className="container-skill" ref={myRef} data-fill="80%">
                 <div className="skill-name">
-                  <p>Html/Sass/Ux</p>
+                  <p>
+                    <span className="bx bxl-html5 "></span>Html/<span className="bx bxl-sass"></span>Sass/
+                    <span className="bx bxl-javascript"></span>Javascript
+                  </p>
                 </div>
                 <div className="skill-per">
                   <p>80%</p>
@@ -51,7 +54,9 @@ const Skill = () => {
               </div>
               <div className="container-skill" ref={myRef} data-fill="60%">
                 <div className="skill-name">
-                  <p>Javascript/Jquery</p>
+                  <p>
+                    <span className="bx bxl-react"></span>React js /<span className="bx bxl-jquery"></span>Jquery
+                  </p>
                 </div>
                 <div className="skill-per">
                   <p>60%</p>
@@ -59,7 +64,9 @@ const Skill = () => {
               </div>
               <div className="container-skill" ref={myRef} data-fill="30%">
                 <div className="skill-name">
-                  <p>React js/Shopify</p>
+                  <p>
+                    <span className="bx bxl-wordpress"></span>Wordpress/ <span className="bx bxl-shopify"></span>Shopify
+                  </p>
                 </div>
                 <div className="skill-per">
                   <p>30%</p>
@@ -75,7 +82,9 @@ const Skill = () => {
               </div>
               <div className="container-skill" ref={myRef} data-fill="30%">
                 <div className="skill-name">
-                  <p>Wordpress/Php</p>
+                  <p>
+                    <i className="bx bxl-php"></i>
+                  </p>
                 </div>
                 <div className="skill-per">
                   <p>30%</p>
