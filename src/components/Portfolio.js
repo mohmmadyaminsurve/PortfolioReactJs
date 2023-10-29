@@ -19,7 +19,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <section className="Portfolio" id="portfolio" data-aos="fade-up">
+      <section className="Portfolio" id="portfolio">
         <div className="section-wrap">
           <h2 className="title"> My Portfolio</h2>
           <div className="Portfolio-tab-container">
@@ -35,7 +35,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="content-tabs">
+            <div className="content-tabs " data-aos="fade-up">
               <div className="container-holder">
                 <div className={showtab === 1 ? "content content-active " : "content"}>
                   <div className="image-container">

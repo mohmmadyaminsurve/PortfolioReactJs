@@ -35,17 +35,11 @@ const Skill = () => {
 
   return (
     <>
-      <section
-        className="Skills"
-        id="skill"
-        style={{ backgroundImage: `url(${Group})` }}
-        data-aos="fade-down"
-        ref={ref}
-      >
+      <section className="Skills" id="skill" style={{ backgroundImage: `url(${Group})` }} ref={ref}>
         <div className="section-wrap">
           <h2 className="title">Skills</h2>
           <div className="flex-container">
-            <div className="text-container">
+            <div className="text-container" data-aos="fade-down" data-os-offset="50">
               <h3>Professional Skills</h3>
               <div className="container-skill" ref={myRef} data-fill="80%">
                 <div className="skill-name">
@@ -88,7 +82,7 @@ const Skill = () => {
                 </div>
               </div>
             </div>
-            <div className="image-container">
+            <div className="image-container" data-aos="fade-down">
               <img src={Skillimage} alt="" />
             </div>
           </div>

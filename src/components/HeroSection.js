@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   return (
     <>
-      <section className="Hero-Section" data-aos="fade-down">
+      <section className="Hero-Section">
         <div className="section-wrap">
           <div className="flex-container">
             <div className="text-container">

@@ -12,16 +12,16 @@ const About = () => {
   }, []);
   return (
     <>
-      <section className="About-Us" id="about" data-aos="fade-down">
+      <section className="About-Us" id="about">
         <div className="section-wrap">
           <h2 className="title">About Me</h2>
           <div className="flex-container">
             <div className="image-container">
-              <img src={Aboutme} alt="" />
+              <img data-aos="fade-down" src={Aboutme} alt="" />
             </div>
             <div className="text-container">
-              <h3> I am Yamin</h3>
-              <p>
+              <h3 data-aos="fade-down"> I am Yamin</h3>
+              <p data-aos="fade-down">
                 A passionate web developer blending code and design for seamless online experiences. With expertise in
                 both front-end and back-end, I turn ideas into pixel-perfect realities. Let's collaborate to bring your
                 digital vision to life.

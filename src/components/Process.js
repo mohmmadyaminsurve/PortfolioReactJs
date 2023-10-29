@@ -57,12 +57,12 @@ const Process = () => {
   };
   return (
     <>
-      <section className="Process" id="process" data-aos="fade-down" data-os-offset="50">
+      <section className="Process" id="process">
         <div className="section-wrap">
           <h2 className="title">Process</h2>
           <div className="slider-rough">
             <Slider {...settings}>
-              <div className="card">
+              <div className="card" data-aos="fade-down" data-os-offset="50">
                 <div className="icon-container">
                   <img src={searchimg} alt="" />
                 </div>
@@ -72,7 +72,7 @@ const Process = () => {
                   Understand project goals, target audience, and requirements through client meetings and research.
                 </p>
               </div>
-              <div className="card">
+              <div className="card" data-aos="fade-down" data-os-offset="50">
                 <div className="icon-container">
                   <img src={layout} alt="" />
                 </div>
@@ -80,7 +80,7 @@ const Process = () => {
                 <p> Develop a project plan, define milestones, and select technologies for a structured approach.</p>
               </div>
 
-              <div className="card">
+              <div className="card" data-aos="fade-down" data-os-offset="50">
                 <div className="icon-container">
                   <img src={Development} alt="" />
                 </div>
@@ -91,7 +91,7 @@ const Process = () => {
                 </p>
               </div>
 
-              <div className="card">
+              <div className="card" data-aos="fade-down" data-os-offset="50">
                 <div className="icon-container">
                   <img src={Bug} alt="" />
                 </div>
@@ -102,7 +102,7 @@ const Process = () => {
                 </p>
               </div>
 
-              <div className="card">
+              <div className="card" data-aos="fade-down" data-os-offset="50">
                 <div className="icon-container">
                   <img src={Client} alt="" />
                 </div>
@@ -110,7 +110,7 @@ const Process = () => {
                 <p> Involve clients throughout, gather feedback, and make revisions to align with their vision.</p>
               </div>
 
-              <div className="card">
+              <div className="card" data-aos="fade-down" data-os-offset="50">
                 <div className="icon-container">
                   <img src={support} alt="" />
                 </div>
