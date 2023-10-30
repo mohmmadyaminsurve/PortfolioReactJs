@@ -21,7 +21,7 @@ const HeroSection = () => {
               </h1>
               <div className="btn">
                 <span>
-                  <a href="yaminsurve-cv.pdf" download={"one.pdf"}>
+                  <a href="yaminsurve-cv.pdf" download={"yaminsyrve-cv.pdf"}>
                     Download Cv
                   </a>
                 </span>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import "./Skill.scss";
 import Skillimage from "./Images/Skillimage.png";
 import Group from "./Images/Group1.svg";
@@ -7,44 +7,21 @@ import Php from "./Images/php.png";
 import Asp from "./Images/aspnet.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { useInView } from "react-intersection-observer";
 
 const Skill = () => {
   useEffect(() => {
     Aos.init({ duration: 2000, startEvent: "load", once: false });
   }, []);
 
-  const myRef = useRef();
-  const [ref, inView] = useInView({
-    triggerOnce: false,
-    threshold: 0.2, // Adjust this threshold as needed
-  });
-
-  useEffect(() => {
-    if (inView) {
-      fillSkillBars();
-    }
-  }, [inView]);
-
-  const fillSkillBars = () => {
-    const skillBars = myRef.current.querySelectorAll(".container-skill");
-
-    skillBars.forEach((bar, index) => {
-      const fill = bar.querySelector(".skill-per");
-      const fillWidth = bar.getAttribute("data-fill");
-      fill.style.width = fillWidth;
-    });
-  };
-
   return (
     <>
-      <section className="Skills" id="skill" style={{ backgroundImage: `url(${Group})` }} ref={ref}>
+      <section className="Skills" id="skill" style={{ backgroundImage: `url(${Group})` }}>
         <div className="section-wrap">
           <h2 className="title">Skills</h2>
           <div className="flex-container">
-            <div className="text-container" data-aos="fade-down" data-os-offset="50">
+            <div className="text-container" data-aos="fade-down">
               <h3>Professional Skills</h3>
-              <div className="container-skill" ref={myRef} data-fill="80%">
+              <div className="container-skill">
                 <div className="skill-name">
                   <p>
                     <span className="bx bxl-html5 "></span>Html/<span className="bx bxl-sass"></span>Sass/
@@ -56,7 +33,7 @@ const Skill = () => {
                 </div>
               </div>
 
-              <div className="container-skill" ref={myRef} data-fill="30%">
+              <div className="container-skill">
                 <div className="skill-name">
                   <p>
                     <span className="bx bxl-react"></span>Reactjs/<span className="bx bxl-jquery"></span>Jquery
@@ -66,7 +43,7 @@ const Skill = () => {
                   <p>30%</p>
                 </div>
               </div>
-              <div className="container-skill" ref={myRef} data-fill="30%">
+              <div className="container-skill">
                 <div className="skill-name">
                   <p>
                     <span className="bx bxl-wordpress"></span>Wordpress/ <span className="bx bxl-shopify"></span>Shopify
@@ -76,7 +53,7 @@ const Skill = () => {
                   <p>30%</p>
                 </div>
               </div>
-              <div className="container-skill" ref={myRef} data-fill="20%">
+              <div className="container-skill">
                 <div className="skill-name">
                   <p>
                     <span>
@@ -93,7 +70,7 @@ const Skill = () => {
                   <p>20%</p>
                 </div>
               </div>
-              <div className="container-skill" ref={myRef} data-fill="20%">
+              <div className="container-skill">
                 <div className="skill-name">
                   <p>
                     <span>
